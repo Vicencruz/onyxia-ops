@@ -1,9 +1,10 @@
 onyxia:
   ingress:
     enabled: true
-    #ingressClassName: nginx
+    # Es vital descomentar esta línea para que use el controlador que configuramos
+    ingressClassName: nginx 
     hosts:
-      - host: datalab.$DOMAIN
+      - host: datalab.onyxia.esad.ignos.net # URL de acceso al panel
   web:
     env:
       #GLOBAL_ALERT: |
@@ -18,14 +19,16 @@ onyxia:
     regions: [
       {
         id: "my-region",
-        name: "My Region",
-        description: "Region hosted on my-cluster",
+        name: "Ignos Datalab",
+        description: "Entorno de pruebas Onyxia sobre k3d",
         services: {
           type: "KUBERNETES",
           singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
-            domain: "lab.$DOMAIN"
+            # Aquí es donde se lanzarán los Jupyter/VSCode
+            # IMPORTANTE: Coincide con tu wildcard *.labs.onyxia.esad.ignos.net
+            domain: "labs.onyxia.esad.ignos.net" 
           }
         }
       }
