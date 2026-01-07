@@ -14,31 +14,31 @@ minio:
     #  kubernetes.io/ingress.class: nginx
     path: /
     hosts:
-      - minio.lab.$DOMAIN
+      - minio.lab.onyxia.esad.ignos.net
     tls:
       - hosts:
-          - minio.lab.$DOMAIN
+          - minio.lab.onyxia.esad.ignos.net
   consoleIngress:
     enabled: true
     #annotations:
     #  kubernetes.io/ingress.class: nginx
     paths: /
     hosts:
-      - minio-console.lab.$DOMAIN
+      - minio-console.lab.onyxia.esad.ignos.net
     tls:
       - hosts:
-          - minio-console.lab.$DOMAIN
+          - minio-console.lab.onyxia.esad.ignos.net
   persistence:
     size: 10Gi
   environment:
-    MINIO_BROWSER_REDIRECT_URL: https://minio-console.lab.$DOMAIN
+    MINIO_BROWSER_REDIRECT_URL: https://minio-console.lab.onyxia.esad.ignos.net
   oidc:
     enabled: true
-    configUrl: "https://auth.lab.$DOMAIN/auth/realms/datalab/.well-known/openid-configuration"
+    configUrl: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab/.well-known/openid-configuration"
     clientId: "minio"
     claimName: "policy"
     scopes: "openid,profile,email"
-    redirectUri: "https://minio-console.lab.$DOMAIN/oauth_callback"
+    redirectUri: "https://minio-console.lab.onyxia.esad.ignos.net/oauth_callback"
     claimPrefix: ""
     comment: ""
     clientSecret: $KEYCLOAK_MINIO_CLIENT_SECRET
