@@ -1,7 +1,7 @@
 onyxia:
   ingress:
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: nginx
     hosts:
       - host: datalab.onyxia.esad.ignos.net
   web:
@@ -40,13 +40,14 @@ onyxia:
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"
       #springdoc.swagger-ui.oauth.clientId: onyxia
+      oidc.jwks-uri: "http://keycloak.default.svc.cluster.local/auth/realms/datalab/protocol/openid-connect/certs"
     
     # The region configuration is available here: 
     # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md
     regions: [
       {
         id: "my-region",
-        name: "My Region",
+        name: "Ignos Datalab",
         description: "Region hosted on my-cluster",
         services: {
           type: "KUBERNETES",
