@@ -37,6 +37,8 @@ onyxia:
       authentication.mode: "openidconnect"
       oidc.issuer-uri: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab"
       oidc.clientID: "onyxia"
+      # Permite que la API hable con Keycloak por HTTPS ignorando el error de certificado autofirmado
+      oidc.skip-tls-verify: "true"
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"
       #springdoc.swagger-ui.oauth.clientId: onyxia
