@@ -34,6 +34,11 @@ onyxia:
     # The full list of configuration option for the api component is available here:
     # https://github.com/InseeFrLab/onyxia-api?tab=readme-ov-file#configuration
     env:
+      # Activa el log de depuración para todo el framework
+      logging.level.root: "INFO"
+      # Activa el log específico para la lógica de Onyxia y seguridad
+      logging.level.fr.insee: "DEBUG"
+      logging.level.org.springframework.security: "DEBUG"
       PROXY_SET_X_FORWARDED_PROTO: "true"
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
