@@ -58,9 +58,9 @@ onyxia:
           expose: {
             domain: "lab.onyxia.esad.ignos.net"
           },
-          #namespacePrefix:"user-",
+          namespacePrefix:"user-",
           #usernamePrefix:"oidc-",
-          #groupNamespacePrefix:"project-",
+          groupNamespacePrefix:"project-",
           #groupPrefix:"oidc-",
         }
       }
