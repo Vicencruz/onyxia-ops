@@ -8,6 +8,7 @@ onyxia:
     # The full list of configuration option for the web component is available here: 
     # https://github.com/InseeFrLab/onyxia/blob/main/web/.env
     env:
+      ONYXIA_URL: "https://datalab.onyxia.esad.ignos.net"
       #GLOBAL_ALERT: |
       #  {
       #    severity: "success",
@@ -33,6 +34,7 @@ onyxia:
     # The full list of configuration option for the api component is available here:
     # https://github.com/InseeFrLab/onyxia-api?tab=readme-ov-file#configuration
     env:
+      PROXY_SET_X_FORWARDED_PROTO: "true"
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
       oidc.issuer-uri: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab"
