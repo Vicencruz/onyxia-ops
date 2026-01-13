@@ -41,7 +41,7 @@ minio:
     redirectUri: "https://minio-console.lab.onyxia.esad.ignos.net/oauth_callback"
     claimPrefix: ""
     comment: ""
-    clientSecret: $KEYCLOAK_MINIO_CLIENT_SECRET
+    clientSecret: gmD5cIdcpFHa1mFk3lcVZVqGrQEQXWvT
   policies:
     - name: stsonly
       statements:
