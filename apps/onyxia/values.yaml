@@ -69,6 +69,26 @@ onyxia:
           #usernamePrefix:"oidc-",
           groupNamespacePrefix: "onyxia-project-",
           #groupPrefix:"oidc-",
+        },
+        # Documentation for the S3 configuration is available here:
+        # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md#s3
+        data: {
+          S3 : {
+            URL: "https://minio.lab.onyxia.esad.ignos.net",
+            pathStyleAccess: true,
+            sts: {
+                durationSeconds: 86400,
+                oidcConfiguration: {
+                  clientID: "onyxia-minio"
+                }
+            },
+            workingDirectory: {
+                bucketMode: "multi",
+                bucketNamePrefix: "onyxia-user-",
+                bucketNamePrefixGroup: "onyxia-project-"
+            }
+          }
         }
+
       }
     ]
