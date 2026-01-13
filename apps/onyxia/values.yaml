@@ -39,6 +39,7 @@ onyxia:
       # Activa el log específico para la lógica de Onyxia y seguridad
       logging.level.fr.insee: "DEBUG"
       logging.level.org.springframework.security: "DEBUG"
+      server.forward-headers-strategy: "framework"
       PROXY_SET_X_FORWARDED_PROTO: "true"
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
