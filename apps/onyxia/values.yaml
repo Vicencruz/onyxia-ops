@@ -35,14 +35,14 @@ onyxia:
     # https://github.com/InseeFrLab/onyxia-api?tab=readme-ov-file#configuration
     env:
       # Activa el log de depuración para todo el framework
-      logging.level.root: "INFO"
+      #logging.level.root: "INFO"
       # Activa el log específico para la lógica de Onyxia y seguridad
-      logging.level.fr.insee: "DEBUG"
-      logging.level.org.springframework.security: "DEBUG"
-      server.forward-headers-strategy: "framework"
+      #logging.level.fr.insee: "DEBUG"
+      #logging.level.org.springframework.security: "DEBUG"
+      #server.forward-headers-strategy: "framework"
       # Esto le dice a Spring Security que permita frames del mismo origen
-      security.headers.frame-options.policy: "SAMEORIGIN"
-      PROXY_SET_X_FORWARDED_PROTO: "true"
+      #security.headers.frame-options.policy: "SAMEORIGIN"
+      #PROXY_SET_X_FORWARDED_PROTO: "true"
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
       oidc.issuer-uri: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab"
