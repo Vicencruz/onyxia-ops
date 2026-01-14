@@ -45,7 +45,7 @@ onyxia:
       #PROXY_SET_X_FORWARDED_PROTO: "true"
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
-      oidc.issuer-uri: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab"
+      oidc.issuer-uri: "http://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab"
       oidc.clientID: "onyxia"
       # Permite que la API hable con Keycloak por HTTPS ignorando el error de certificado autofirmado
       oidc.skip-tls-verify: "true"
