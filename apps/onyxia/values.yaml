@@ -91,7 +91,18 @@ onyxia:
                 bucketNamePrefixGroup: "onyxia-project-"
             }
           }
+        },
+        vault: {
+            URL: "http://vault.default.svc.cluster.local:8200",
+            kvEngine: "onyxia-kv",
+            role: "onyxia-user",
+            authPath: "jwt",
+            prefix: "user-",
+            groupPrefix: "projet-",
+            oidcConfiguration: {
+                issuerURI: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab",
+                clientID: "onyxia"
+            }
         }
-
       }
     ]
