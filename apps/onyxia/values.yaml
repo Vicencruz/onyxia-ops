@@ -100,7 +100,7 @@ onyxia:
             prefix: "user-",
             groupPrefix: "projet-",
             oidcConfiguration: {
-                issuerURI: "https://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab",
+                issuerURI: "http://auth.lab.onyxia.esad.ignos.net/auth/realms/datalab",
                 clientID: "onyxia"
             }
         }
